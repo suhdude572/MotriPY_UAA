@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validación de Token</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/estiloRegistro.css" rel="stylesheet" type="text/css"> 
+    <link rel="icon" href="logo.ico">
+</head>
+<body style="background-image: url(images/images/fondo/formularioRegistro.png); background-size: cover">
+    <header>
+        <a href=" "><div class="botom-arriba">
+                <i class="fas fa-angle-double-left"></i>
+            </div></a>
+    </header>
+    <section class="container">
+        <div class="row my-5 needs-validation" novalidate>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+
+                <form action="http://localhost:8080/validate/:token" method="GET" class="colorFormulario" id="tokenValidationForm">
+                    <h3 class="display-5 text-primary text-center">Validación de Token</h3>
+                    <div class="col-16 position-relative">
+                        <label for="tokenInput" class="form-label">Token:</label>
+                        <input type="text" class="form-control" id="tokenInput" placeholder="Ingresa el token" name="token" required>
+                        <div class="valid-tooltip">
+                            Correcto
+                        </div>
+                        <div class="invalid-tooltip">
+                            Ingresa el token
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn bg-primary bg-gradient">Validar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="redes-div">        
+            <ul class="icon-redes">
+                <li><a href="definicion.html" class="redes"><span class="facebook"><i class="fab fa-facebook"></i></span></a></li>
+                <li><a href="https://www.instagram.com/acosta_julian01/?hl=es"class="redes"><span class="instagram"><i class="fab fa-instagram"></i></span></a></li>
+                <li><a href="juegos.html" class="redes"><span class="twitter"><i class="fab fa-twitter"></i></span></a></li>
+            </ul>
+            <img class="Logo" src="logo.png" alt="">
+        </div>
+        <h2 class="titulo-final">&copy;INTEGRANTESC. </h2>
+    </footer>
+    <script>
+        document.getElementById("tokenValidationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+        
+            let form = event.target;
+            let formData = new FormData(form);
+        
+            // Get the base URL
+            let url = form.action;
+        
+            // Get the token
+            let token = formData.get('token');
+        
+            // Append the token to the URL as a path parameter
+            url = url.replace(':token', encodeURIComponent(token));
+        
+            fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json' // Set the Content-Type header to JSON
+                },
+                credentials: 'same-origin' // Add this line to send cookies along with the request if needed
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text(); // Change this line
+            })
+            .then(result => {
+                // Check if the token validation was successful
+                var success = (result === "User validated successfully"); // Change this line to compare with your actual success message
+            
+                if (success) {
+                    // Display the success notification
+                    alert("Validación exitosa.");
+                    
+                    // Redirect to the "Perfil.html" form
+                    window.location.href = 'Perfil.html';
+                } else {
+                    // Handle the case when token validation fails
+                    // Display an error notification or perform other actions
+                    alert("La validación del token ha fallado. Inténtalo nuevamente.");
+                }
+            })
+            .catch(error => {
+                console.error('There was an error!', error);
+            });
+        });
+    </script>
+    <script src="js/jquery3.7.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+</body>
+</html>

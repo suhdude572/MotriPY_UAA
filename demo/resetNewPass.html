@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Cambio de contraseña</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/icono.ico" rel="icon"  class="rounded-circle">
+  <link href="assets/img/icono.ico" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body> 
+  <!-- ======= nav ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center  me-lg-0">
+         <img src="assets/img/logo.png" alt=""> 
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html #hero">Inicio</a></li>
+          <li><a href="index.html #about">Acerca de Nosotros</a></li>
+          <li><a href="index.html #menu">Lo Nuevo</a></li>
+          <li><a href="index.html #events">Eventos</a></li>
+          <li><a href="index.html #chefs">Alianzas</a></li>
+          <li><a href="">Destacados</a></li>
+          <li class="dropdown"><a href="#"><span>Productos</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="Tienda.html">Todos los productos</a></li>
+              <li class="dropdown"><a href="#"><span>Promociones</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="Tienda.html">Promociones 1</a></li>
+                  <li><a href="Tienda.html">Promociones 2</a></li>
+                  <li><a href="Tienda.html">Promociones 3</a></li>
+                </ul>
+              </li>
+              <li><a href="Tienda.html">Descuentos</a></li>
+              <li><a href="Tienda.html">Búsqueda Avanzada</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html #contact">Contactanos</a></li>
+        </ul>
+      </nav><!-- navbar -->
+      <div class="perfil-caja">
+        <li class="dropdown"><a class="carri" href="Inicio de Sesion.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Inicie Sesion o Resgistrese"><i class="bi bi-person-fill"></i></a>
+        </li>
+        <li class="dropdown "><a class="conta"data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-cart" id="carritoContenedor"></i></a>
+        </li>
+      </div>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- ======= Fin nav ======= -->
+
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Alguna Portada</h2>
+          <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li>Modifique su contraseña</li>
+          </ol>
+        </div>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+   
+    <!-- ======= Book A Table Section ======= -->
+    <section id="book-a-table " class="recuperacionContra">
+      <div class="container " data-aos="fade-up">
+        <div class="section-header">
+          <p>Modifique<span class="color:#32C330"> su contraseña</span></p>
+        <div class="row ">
+          <div class="col-lg-16 reservation-form-bg">
+            <form action="http://localhost:8080/validate/:token" method="GET" class="colorFormulario" id="tokenValidationForm">
+              <div class = "mb-3">
+                <div class="form-floating needs-validation col-6 position-relative" novalidate>
+                  <div class="form-floating col-16 position-relative needs-validation" novalidate>
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Escriba su nueva contraseña"  name="newPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos un número y una letra mayúscula y minúscula, y al menos 8 o más caracteres." placeholder="Escriba su contraseña" required>
+                    <label for="floatingPassword">Escriba su nueva contraseña</label>
+                    <div id="message">
+                      <h3>La contraseña debe contener lo siguiente:</h3>
+                      <p id="letter" class="invalid">A <b>minusculas</b> carta</p>
+                      <p id="capital" class="invalid">A <b>Mayusculas</b> carta</p>
+                      <p id="number" class="invalid">A <b>numeros</b></p>
+                      <p id="length" class="invalid">Minimos <b>8 caracteres</b></p>
+                    </div>
+                  </div>
+                  <div class="form-floating  needs-validation" novalidate>
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Vuelva a escribir su nueva contraseña"  name="repeatNewPassword"required>
+                    <label for="floatingPassword">Vuelva a escribir su nueva contraseña</label>
+                  </div>
+                </div>
+              </div>
+            <div class="col-lg-6">
+                <button type="submit" class="btn btn-primary mb-3">Confirmar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    </section><!-- Fin de la seccion -->
+
+  </main><!-- End principal -->
+<!--CAnvas de carrito-->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel">Carrito</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body CartCarga">
+     <div class="canvas-body CartChar"></div>
+     <hr>
+     <div class="modal-footer">
+      <div class = "row">
+        <div class="col">
+          <button type="button" class="btn btn-danger" id="vaciar">
+              Vaciar carrito
+          </button>
+        </div>
+        <div class="col">
+          <button type="button" id="procesarCompra" class="btn btn-success ">
+              Finalizar compra
+          </button>
+        </div>
+        <div class="col">
+          <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="offcanvas" 
+              aria-label="Close">
+              Cerrar Carrito
+          </button>
+        </div>
+    </div>
+      <span>Precio total: </span>
+      <p class="text-center" id="precioTotal"></p>
+      </div>
+  </div>
+</div>
+  <!-- ======= Pie de la pagina ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div>
+            <h4>Ubicación</h4>
+            <p>
+              Pedo Juan Caballero<br>
+              Villa Elisa, VE NUM - PY<br>
+            </p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Contacto</h4>
+            <p>
+              <strong>Telefóno:</strong> +595 994 152020<br>
+              <strong>Email:</strong> motripy@gmial.com<br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Horario de atención</h4>
+            <p>
+              <strong>24Hrs.</strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Siguienos</h4>
+          <div class="social-links d-flex">
+            <a href="https://www.facebook.com/Motripy?mibextid=ZbWKwL" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com/motripy?igshid=MzRlODBiNWFlZA==" class="instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>MOTRIPY</span></strong>. TODOS LOS DERECHOS RESERVADOS.
+      </div>
+      <div class="credits">
+        <a href="https://bootstrapmade.com/license/ ">Designed by GRUPO 4</a>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  <div class="icon-scroll d-flex align-items-center justify-content-center">
+    <a href="https://wa.me/994152020?text=Quiero%20realizar%20un%20pedido%20de%20juguetes%20" target="_blank"  class="scroll-wh d-flex align-items-center justify-content-center"><i class="bi bi-whatsapp"></i></a>
+  </div>
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+
+  <script src="assets/js/main.js"></script>
+ 
+</body>
+
+</html>

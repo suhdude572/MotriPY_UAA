@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perfil de Usuario</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/estiloPerfilUsuario.css" rel="stylesheet" type="text/css"> 
+    <link rel="icon" href="logo.ico">
+</head>
+<body style="background-image: url(images/images/fondo/InicioSesion.png); background-size: cover" >
+    <header>
+        <nav>
+        </nav>
+    </header>
+
+    <section class="container">
+        <div class="row my-5">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <h1 class="display-4 text-center">Bienvenido a MOTRYPY!</h1>
+                <!-- Datos del usuario -->
+                 <p class="display-5 text-primary text-center"><strong>Nombre:</strong> <span id="resNombre"></span></p>
+                 <p class="display-5 text-primary text-center"><strong>Apellido:</strong> <span id="resApellido"></span></p>
+                <p class="display-5 text-primary text-center"><strong>Correo Electrónico:</strong> <span id="resEmail"></span></p>
+                
+                <p class="display-5 text-primary text-center"><strong>Dirección:</strong> <span id="resDireccion"></span></p>
+               
+                <div class="text-center">
+                    <a href="index.html" class="btn btn-primary">Haz click para modificar los datos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="redes-div">        
+        <ul class="icon-redes">
+            <li><a href="definicion.html" class="redes"><span class="facebook"><i class="fab fa-facebook"></i></span></a></li>
+            <li><a href="https://www.instagram.com/acosta_julian01/?hl=es"class="redes"><span class="instagram"><i class="fab fa-instagram"></i></span></a></li>
+            <li><a href="juegos.html" class="redes"><span class="twitter"><i class="fab fa-twitter"></i></span></a></li>
+        </ul>
+        <img class="Logo" src="logo.png" alt="" width= 200px>
+    </div>
+    </footer>
+    <script>
+        // Fetch the user ID from local storage
+var userId = localStorage.getItem('userId'); 
+
+if (!userId) {
+    console.error('No user ID found');
+} else {
+    // Send the request to your server
+    fetch('http://localhost:8080/user/' + userId)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Populate the user information on the page
+            document.getElementById('resNombre').textContent = data.firstName;
+            document.getElementById('resApellido').textContent = data.lastName;
+            document.getElementById('resEmail').textContent = data.email;
+            document.getElementById('resDireccion').textContent = data.address;
+        })
+        .catch(error => console.error('Error:', error));
+}
+    </script>
+    <script src="js/jquery3.7.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+</body>
+</html>

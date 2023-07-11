@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!DOCTYPE html>
+  <html lang="es">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>Tienda-Motripy</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  
+    <!-- Favicons -->
+    <link href="assets/img/icono.ico" rel="icon"  class="rounded-circle">
+    <link href="assets/img/icono.ico" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+  
+  </head>
+  
+  <body>
+  
+    <!-- ======= nav ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+  
+        <a href="index.html" class="logo d-flex align-items-center  me-lg-0">
+           <img src="assets/img/logo.png" alt=""> 
+        </a>
+  
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="index.html #hero">Inicio</a></li>
+            <li><a href="index.html #about">Acerca de Nosotros</a></li>
+            <li><a href="index.html #menu">Lo Nuevo</a></li>
+            <li><a href="index.html #events">Eventos</a></li>
+            <li><a href="index.html #chefs">Alianzas</a></li>
+            <li><a href="index.html">Destacados</a></li>
+            <li class="dropdown"><a href="#"><span>Productos</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+              <ul>
+                <li><a href="Tienda.html">Todos los productos</a></li>
+                <li class="dropdown"><a href="#"><span>Promociones</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                  <ul>
+                    <li><a href="Tienda.html">Promociones 1</a></li>
+                    <li><a href="Tienda.html">Promociones 2</a></li>
+                    <li><a href="Tienda.html">Promociones 3</a></li>
+                  </ul>
+                </li>
+                <li><a href="Tienda.html">Descuentos</a></li>
+                <li><a href="Tienda.html">Búsqueda Avanzada</a></li>
+              </ul>
+            </li>
+            <li><a href="index.html #contact">Contactanos</a></li>
+          </ul>
+        </nav><!-- navbar -->
+        <div class="perfil-caja">
+          <li class="dropdown"><a class="carri" href="Inicio de Sesion.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Inicie Sesion o Resgistrese"><i class="bi bi-person-fill"></i></a>
+          </li>
+          <li class="dropdown "><a class="conta"data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-cart" id="carritoContenedor"></i></a>
+          </li>
+        </div>
+          <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+  
+      </div>
+    </header><!-- ======= Fin nav ======= --><!-- ======= Fin nav ======= -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Mi CARRITO</h2>
+          <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li>Carrito de: <span id="resNombre"></span></li>
+          </ol>
+        </div>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <div class="container">
+      <div class="row mt-3">
+          <div class="col">
+              <h2 class="d-flex justify-content-center mb-3">Realizar Compra</h2>
+              <form id="procesar-pago" method="POST">
+                <h3 class="d-flex mb-3 text-success">Datos del Cliente:</h3>
+                  <div class="form-group row">
+                      <div class="col-12 col-md-10">
+                        <label for="cliente" class="col-12 col-md-2 col-form-label">Cliente :</label>
+                          <input type="text" class="form-control" id="cliente"
+                              placeholder="Ingresa nombre cliente" name="persona required">
+                      </div>
+                  </div>
+                  <div class="form-group row">
+                      <div class="col-12 col-md-10">
+                        <label for="email" class="col-12 col-md-2 col-form-label h2">Correo :</label>
+                      <input type="text"  id="correo" class="form-control"  name="email.id" id="email.id">
+                      </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <div class="col-12 col-md-10">
+                      <label for="email" class="col-12 col-md-2 col-form-label h2">Teléfono :</label>
+                    <input type="text"  id="correo" class="form-control"  name="email.id" id="email.id">
+                    </div>
+                </div>
+              </form>
+              <h3 class="d-flex mb-3 text-success">Datos de Envío:</h3>
+              <div class="form-group row">
+                  <div class="col-12 col-md-10">
+                    <label for="cliente" class="col-form-label h2">Nombre de la persona que recibe:</label>
+                      <input type="text" class="form-control" id="cliente"
+                          placeholder="Pepito Juarez" name="persona">
+                  </div>
+              </div>
+              <div class="form-group row">
+                  <div class="col-12 col-md-10">
+                    <label for="email" class="col-12 col-md-2 col-form-label h2">Calle Principal:</label>
+                  <input type="text"  id="correo" class="form-control"  name="email.id" id="email.id">
+                  </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-12 col-md-10">
+                  <label for="email" class="col-form-label h2">Calle secundaria (Entre/Casi/Esquina) :</label>
+                <input type="text"  id="correo" class="form-control"  name="email.id" id="email.id">
+                </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-12 col-md-10">
+                <label for="email" class="col-form-label h2">Nro. Casa/Departamento :</label>
+              <input type="text"  id="correo" class="form-control"  name="email.id" id="email.id">
+              </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-12 col-md-10">
+              <label for="email" class="col-form-label h2">Barrio :</label>
+            <input type="text"  id="correo" class="form-control"  name="email.id" id="email.id">
+            </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-12 col-md-10">
+            <label for="email" class="col-form-label h2">Referencias :</label>
+          <input type="text"  id="correo" class="form-control"  name="email.id" id="email.id">
+          </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-12 col-md-10">
+          <label for="email" class="col-form-label h2">Ciudad :</label>
+          <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+            <option selected>Seleccione la ciudad</option>
+            <option value="1">Areguá</option>
+            <option value="2">Capiatá</option>
+            <option value="3">Fernando de la Mora</option>
+            <option value="4">Guarambaré</option>
+            <option value="5">Itá</option>
+            <option value="6">Itauguá</option>
+            <option value="7">Saldívar</option>
+            <option value="8">Lambaré</option>
+            <option value="9">Limpio</option>
+            <option value="10">Luque</option>
+            <option value="11">Mariano Roque Alonso</option>
+            <option value="12">Nueva Italia</option>
+            <option value="13">Ñemby</option>
+            <option value="14">San Antonio</option>
+            <option value="15">San Lorenzo</option>
+            <option value="16">Villa Elisa</option>
+            <option value="17">Villeta</option>
+            <option value="18">Ypacaraí</option>
+            <option value="19">Ypané</option>  
+          </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-12 col-md-10">
+        <label for="email" class="col-form-label h2">Teléfono de la persona que recibe :</label>
+      <input type="text"  id="correo" class="form-control"  name="email.id" id="email.id">
+      </div>
+  </div>
+          </form>
+                  <div id="carrito" class="form-group table-responsive">
+                      <table class="table" id="lista-compra">
+                          <thead>
+                              <tr>
+                                  <th scope="col">Imagen</th>
+                                  <th scope="col">Nombre</th>
+                                  <th scope="col">Precio</th>
+                                  <th scope="col">Cantidad</th>
+                                  <th scope="col">Sub Total</th>
+                              </tr>
+
+                          </thead>
+                          <tbody>
+
+                          </tbody>
+                          <tr>
+                              <th colspan="4" scope="col" class="text-right">TOTAL
+                                  <p id="totalProceso"></p>
+                              </th>
+                              <!-- <th scope="col"></th> -->
+                          </tr>
+
+                      </table>
+                  </div>
+
+                  <div class="row justify-content-center d-none" id="spinner">
+                      <div class="spinner">
+                          <div class="dot1"></div>
+                          <div class="dot2"></div>
+                      </div>
+                  </div>
+
+                  <div class="row justify-content-between">
+                      <div class="col-md-4 mb-2">
+                          <a href="Tienda.html" class="btn btn-info btn-block">Seguir comprando</a>
+                      </div>
+                      <div class="col-xs-12 col-md-4">
+                           <input type="submit" class="btn btn-success btn-block" id="button" value="Finalizar compra" >
+                      </div>
+                  </div>
+          </div>
+      </div>
+  </div>
+  </main><!-- Fin main -->
+<!--CAnvas de carrito-->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel">Carrito</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body CartCarga">
+     <div class="canvas-body CartChar"></div>
+     <hr>
+     <div class="modal-footer">
+      <div class = "row">
+        <div class="col">
+          <button type="button" class="btn btn-danger" id="vaciar">
+              Vaciar carrito
+          </button>
+        </div>
+        <div class="col">
+          <button type="button" id="procesarCompra" class="btn btn-success ">
+              Finalizar compra
+          </button>
+        </div>
+        <div class="col">
+          <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="offcanvas" 
+              aria-label="Close">
+              Cerrar Carrito
+          </button>
+        </div>
+    </div>
+      <span>Precio total: </span>
+      <p class="text-center" id="precioTotal"></p>
+      </div>
+  </div>
+</div>
+  <!-- ======= Pie de pagina ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div>
+            <h4>Ubicación</h4>
+            <p>
+              Pedo Juan Caballero<br>
+              Villa Elisa, VE NUM - PY<br>
+            </p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Contacto</h4>
+            <p>
+              <strong>Telefóno:</strong> +595 994 152020<br>
+              <strong>Email:</strong> motripy@gmial.com<br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Horario de atención</h4>
+            <p>
+              <strong>24Hrs.</strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Siguienos</h4>
+          <div class="social-links d-flex">
+            <a href="https://www.facebook.com/Motripy?mibextid=ZbWKwL" class="facebook"><i
+                class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com/motripy?igshid=MzRlODBiNWFlZA==" class="instagram"><i
+                class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>MOTRIPY</span></strong>. TODOS LOS DERECHOS RESERVADOS.
+      </div>
+      <div class="credits">
+        <a href="https://bootstrapmade.com/license/ ">Designed by GRUPO 4</a>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  <div class="icon-scroll d-flex align-items-center justify-content-center">
+    <a href="https://wa.me/994152020?text=Quiero%20realizar%20un%20pedido%20de%20juguetes%20" target="_blank"
+      class="scroll-wh d-flex align-items-center justify-content-center"><i class="bi bi-whatsapp"></i></a>
+  </div>
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+ 
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

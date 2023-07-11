@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <title>REGISTRO DE USUARIO</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/estiloRegistro.css" rel="stylesheet" type="text/css"> 
+        <link rel="icon" href="logo.ico">
+    </head>
+    <body style="background-image: url(images/images/fondo/formularioRegistro.png); background-size: cover" >
+        <header>
+            <a href=" "><div class="botom-arriba">
+                    <i class="fas fa-angle-double-left"></i>
+                </div></a>
+        </header>
+        <section class = "container">
+            <div class="row my-5 needs-validation" novalidate>
+                <div class="col-sm-12 col-md-12 col-lg-12">
+
+                    <form action="http://localhost:8080/register" method="POST" class="colorFormulario" form id="registrationForm" >
+                        <h3 class="display-5 text-primary text-center">REGISTRO</h3>
+                        <div class = "col-16 position-relative">
+                            <label for="emailInput" class="form-label">Correo Electronico:</label>
+                            <input type = "email" class = "form-control" id = "emailInput" placeholder="Escribe tu email" name="email" required>
+                            <img class="input-icon" src="images/images/correo-electronico.png" alt="">
+                            <div class ="valid-tooltip">
+                                Correcto
+                            </div>
+                            <div class ="invalid-tooltip">
+                                Es necesario poner el correo
+                            </div>
+                        </div>
+
+                        <div class = "col-16 position-relative">
+                            <label for="inputPass" class="form-label">Contraseña:</label>
+                            <input type="password" class="form-control" id="inputPass"  name="password" placeholder="Escriba su contraseña" required >
+                            <img class="input-icon" src="images/images/mostrar-contrasena.png" alt="">
+                            <div class ="valid-tooltip">
+                                Correcto
+                            </div>
+                            <div class ="invalid-tooltip">
+                                Es necesario poner la contraseña
+                            </div>
+                        </div>
+                        <div class = "col-16 position-relative">
+                            <label for="inputPassrepeat" class="form-label">Repita su Contraseña:</label>
+                            <input type="password" class="form-control" id="inputPassrepeat" placeholder="Vuelva a escriba su contraseña" required >
+                            <img class="input-icon" src="images/images/mostrar-contrasena.png" alt="">
+                            <div class ="valid-tooltip">
+                                Correcto
+                            </div>
+                            <div class ="invalid-tooltip">
+                                Es necesario poner la contaseña
+                            </div>
+                        </div>
+                        <div class = "col-16 position-relative">
+                            <label for="InputName" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" placeholder="Escribe tu nombre" id="InputName" name="firstName" required >
+                            <img class="input-icon" src="images/images/dos-personas.png" alt="">
+                            <div class ="valid-tooltip">
+                                Correcto
+                            </div>
+                            <div class ="invalid-tooltip">
+                                Es necesario poner su nombre
+                            </div>
+                        </div>
+                        <div class = "col-16 position-relative">
+                            <label for="InputApellido" class="form-label">Apellido:</label>
+                            <input type="text" class="form-control" placeholder="Escribe tu apellido" id="InputApellido"  name="lastName" required >
+                            <img class="input-icon" src="images/images/dos-personas.png" alt="">
+                            <div class ="valid-tooltip">
+                                Correcto
+                            </div>
+                            <div class ="invalid-tooltip">
+                                Es necesario poner su apellido
+                            </div>
+                        </div>
+                        <div class = "col-16 position-relative">
+                            <label for="InputDireccion" class="form-label">Dirección:</label>
+                            <input type="text" class="form-control" placeholder="Escribe tu dirección" id="InputDireccion" name="address" required >
+                            <img class="input-icon" src="images/images/direccion.png" alt="">
+                            <div class ="valid-tooltip">
+                                Correcto
+                            </div>
+                            <div class ="invalid-tooltip">
+                                Es necesario poner su apellido
+                            </div>
+                        </div>
+                        <div class = "col-16 position-relative">
+                            <label for="InputDireccion" class="form-label">Ciudad:</label>
+                            <input type="text" class="form-control" placeholder="Escribe tu ciudad" id="InputCiudad" name="city" required >
+                            <img class="input-icon" src="images/images/ciudad.png" alt="">
+                            <div class ="valid-tooltip">
+                                Correcto
+                            </div>
+                            <div class ="invalid-tooltip">
+                                Es necesario poner su apellido
+                            </div>
+                        </div>
+                        <div class = "col-16">
+                            <div class = form-check>
+                                <input class="form-check-inputm" type="checkbox" id="terms" name="terms" required ed>
+                                <label for="terms" class="form-check-label">Acepto los términos y condiciones</label>
+                                <div class ="valid-tooltip">
+                                    Correcto
+                                </div>
+                                <div class ="invalid-tooltip">
+                                    Es necesario aceptar los términos
+                                </div>
+                            </div>
+
+                        </div>
+                        <button type="submit" class="btn bg-primary bg-gradient">Enviar</button>
+                </div></div>
+             <div id="resultado" style="display: none;">
+               <h3 class="display-5 text-primary text-center">DATOS DEL REGISTRO</h3>
+               <p class="display-5 text-primary text-center"><strong>Correo Electronico:</strong> <span id="resEmail"></span></p>
+                <p class="display-5 text-primary text-center"><strong>Nombre:</strong> <span id="resNombre"></span></p>
+                <p class="display-5 text-primary text-center"><strong>Apellido:</strong> <span id="resApellido"></span></p>
+                <p class="display-5 text-primary text-center"><strong>Direccion:</strong> <span id="resDireccion"></span></p>
+               
+            </div>
+        </section>
+    </form>
+
+    <footer>
+        <div class="redes-div">        
+            <ul class="icon-redes">
+                <li><a href="definicion.html" class="redes"><span class="facebook"><i class="fab fa-facebook"></i></span></a></li>
+                <li><a href="https://www.instagram.com/acosta_julian01/?hl=es"class="redes"><span class="instagram"><i class="fab fa-instagram"></i></span></a></li>
+                <li><a href="juegos.html" class="redes"><span class="twitter"><i class="fab fa-twitter"></i></span></a></li>
+            </ul>
+            <img class="Logo" src="logo.png" alt="">
+        </div>
+        <h2 class="titulo-final">&copy;INTEGRANTESC. </h2>
+    </footer>
+    <script src="js/jquery3.7.0.min.js"></script>
+    <script>
+        function mostrarResultados() {
+        var email = document.getElementById('emailInput').value;
+        var nombre = document.getElementById('InputName').value;
+        var apellido = document.getElementById('InputApellido').value;
+        var direccion = document.getElementById('InputDireccion').value;
+      
+        
+        // Captura el valor de los demás campos del formulario de manera similar
+
+        // Muestra los valores capturados en la sección de resultados
+        document.getElementById('resEmail').textContent = email;
+        document.getElementById('resNombre').textContent = nombre;
+        document.getElementById('resApellido').textContent = apellido;
+        document.getElementById('resDireccion').textContent = direccion;
+        
+ 
+ 
+        // Muestra los demás valores capturados de manera similar
+
+        // Muestra la sección de resultados
+        document.getElementById('resultado').style.display = 'block';
+    }
+
+    // Evento para capturar los datos y mostrar los resultados al enviar el formulario
+    document.addEventListener('DOMContentLoaded', function() {
+        var form = document.querySelector('form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe
+            mostrarResultados(); // Muestra los resultados
+            
+            setTimeout(function() {
+    
+}, 2000);
+        });
+    });
+    </script>
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+        
+            let form = event.target;
+            let formData = new FormData(form);
+        
+            let jsonData = {};
+            for (let [key, value] of formData.entries()) {
+                jsonData[key] = value;
+            }
+        
+            fetch(form.action, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json' // Set the Content-Type header to JSON
+                },
+                body: JSON.stringify(jsonData),
+                credentials: 'same-origin' // Add this line to send cookies along with the request if needed
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(result => {
+                // Retrieve the user ID from the response data
+                    const userId = result.userId;
+                // Store the user ID in local storage
+                localStorage.setItem('userId', userId);
+                
+                alert("Registro exitoso, por favor revisa tu correo para confirmar la cuenta.");
+                window.location.href = 'tokenValidation.html'; // Redirect to the token validation form
+            })
+            .catch(error => {
+                console.error('There was an error!', error);
+            });
+        });
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script  src= "https://kit.fontawesome.com/41bcea2ae3.js" crossorigin= "anonymous"></script>
+</body>
+</html>

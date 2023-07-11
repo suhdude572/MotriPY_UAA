@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Mi Cuenta-Motripy</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/icono.ico" rel="icon" class="rounded-circle">
+  <link href="assets/img/icono.ico" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= nav ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center  me-lg-0">
+         <img src="assets/img/logo.png" alt=""> 
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="#index.htmlhero">Inicio</a></li>
+          <li><a href="index.html #about">Acerca de Nosotros</a></li>
+          <li><a href="index.html #">Lo Nuevo</a></li>
+          <li><a href="index.html #events">Eventos</a></li>
+          <li><a href="index.html #chefs">Alianzas</a></li>
+          <li><a href="index.html">Destacados</a></li>
+          <li class="dropdown"><a href="#"><span>Productos</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="Tienda.html">Todos los productos</a></li>
+              <li class="dropdown"><a href="#"><span>Promociones</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="Tienda.html">Promociones 1</a></li>
+                  <li><a href="Tienda.html">Promociones 2</a></li>
+                  <li><a href="Tienda.html">Promociones 3</a></li>
+                </ul>
+              </li>
+              <li><a href="Tienda.html">Descuentos</a></li>
+              <li><a href="Tienda.html">Búsqueda Avanzada</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html #contact">Contactanos</a></li>
+        </ul>
+      </nav><!-- navbar -->
+      <div class="perfil-caja">
+        <li class="dropdown" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Inicie Sesion o Resgistrese"><a class="carri" href="Inicio de Sesion.html"><i class="bi bi-person-fill"></i></a>
+        </li>
+        <li class="dropdown "><a class="conta"data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-cart" id="carritoContenedor"></i></a>
+        </li>
+      </div>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+  </header><!-- ======= Fin nav ======= -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Mi Cuenta</h2>
+          <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li>Mi cuenta <span id="resNombre"></span></li>
+          </ol>
+        </div>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <section id="menu" class="menu">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <p>BIENV<span class="color:#32C330">ENIDO</span></p>
+        </div>
+
+        <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+          <li class="nav-item">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-starters">
+              <h4>Usuario</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-breakfast">
+              <h4>Modificar Datos</h4>
+            </a><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-lunch">
+              <h4>Mis Tarjetas</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-dinner">
+              <h4>Pedidos</h4>
+            </a>
+          </li><!-- End tab nav item -->
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-dinner">
+              <h4>Salir</h4>
+            </a>
+          </li><!-- End tab nav item -->
+        </ul>
+
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
+          <div class="tab-pane fade active show" id="menu-starters">
+            <div class="tab-header text-center">
+              <h3>Hecha un ojo a tus datos</h3>
+            </div>
+            <div class="row gy-5">
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/testimonials/testimonials-1.jpg" class="glightbox"><img src="assets/img/testimonials/testimonials-1.jpg" class="menu-img img-fluid" alt=""></a>
+                <p class="ingredients">
+                  <strong>Nombre:</strong> <span id="resNombre"></span>
+                </p>
+                <p class="ingredients">
+                  <strong>Correo Electrónico:</strong> <span id="resEmail"></span></p>
+                </p>
+                <p class="ingredients">
+                  <strong>Dirección:</strong> <span id="resDireccion"></span></p>
+                </p>
+                <p class="ingredients">
+                  <strong>Ciudad:</strong> <span id="resCiudad"></span></p>
+                </p>
+              </div><!-- Menu Item -->
+
+
+            </div>
+          </div><!-- End Starter Menu Content -->
+
+          <div class="tab-pane fade" id="menu-breakfast">
+
+            <div class="tab-header text-center">
+              <h3>Modifica tus Datos</h3>
+            </div>
+            <div class="row gy-0">
+              <div class="col-lg-10">
+                <form action="" method="POST" role="" id="formularioCamDatos" name="formularioCamDatos" class="needs-validation" data-aos="" data-aos-delay="100" novalidate>
+                   <h2 class="titulos-regis">Datos personales</h2>
+                  <div class = "mb-3">
+                    <label for="InputDireccion" class="form-label">Correo:</label>
+                    <div class="form-floating needs-validation col-16 position-relative" novalidate>
+                      <input type = "email" class = "form-control" id = "emailInput" placeholder="Escribe tu email" name="email" required>
+                      <label for="floatinggemailInput">Escribe tu correo electronico</label>
+                      <div class ="valid-tooltip">
+                          Correcto
+                      </div>
+                      <div class ="invalid-tooltip">
+                          Es necesario poner el correo
+                      </div>
+                    </div>
+                  </div>
+                   <div class = "row">
+                    <div class = "col">
+                      <label for="InputDireccion" class="form-label">Nombre(s):</label>
+                      <div class="form-floating needs-validation col-16 position-relative" novalidate>
+                        <input type="text" class="form-control" placeholder="Escriba su nombre" id="InputName" name="firstName" required >
+                        <label for="floatingfirsname">Escriba su nombre</label>
+                        <div class ="valid-tooltip">
+                            Correcto
+                        </div>
+                        <div class ="invalid-tooltip">
+                            Es necesario poner su nombre
+                        </div>
+                      </div>
+                    </div>
+                    <div class = "col">
+                      <label for="InputDireccion" class="form-label">Apellido(s):</label>
+                      <div class="form-floating needs-validation col-16 position-relative" novalidate>
+                      <input type="text" class="form-control" placeholder="Escriba su apellido" id="InputName" name="lasttName" required >
+                      <label for="floatingfirsname">Escriba su apellido</label>
+                      <div class ="valid-tooltip">
+                          Correcto
+                      </div>
+                      <div class ="invalid-tooltip">
+                          Es necesario poner su apellido
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+
+                  <div class = "row">
+                    <div class="col">
+                      <label for="InputDireccion" class="form-label">Dirección:</label>
+                      <div class="form-floating needs-validation col-16 position-relative" novalidate>
+                      <input type="text" class="form-control" placeholder="Escriba su dirección" id="InputDireccion" name="address" required >
+                      <label for="floatingfirsname">Escriba su dirección</label>
+                      <div class ="valid-tooltip">
+                          Correcto
+                      </div>
+                      <div class ="invalid-tooltip">
+                          Es necesario poner su dirección
+                      </div>
+                    </div>
+                     </div>
+                    <div class = "col">
+                      <label for="InputDireccion" class="form-label">Ciudad:</label>
+                      <div class="form-floating needs-validation col-16 position-relative" novalidate>
+                      <input type="text" class="form-control" placeholder="Escribe tu ciudad" id="InputCiudad" name="city" required >
+                      <label for="floatingfirsname">Escriba su ciudad</label>
+                      <div class ="valid-tooltip">
+                        Correcto
+                      </div>
+                      <div class ="invalid-tooltip">
+                        Es necesario poner su ciudad
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="text-center"> <br><button type="button" class="btn-cambio  bg-gradient" id="submitBtn">Guardar Datos Actualizados</button></div>
+                  
+                <div class = "row">
+                    <h2 class="titulos-regis"><br> Cambio de Contraseña</h2>
+                    <div class="modal-body">
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn-cambio  bg-gradient" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Oprima aqui para cambiar su contraseña
+                      </button>
+                    </div>
+                </div>
+          </div><!-- fin de seccion -->
+
+          <div class="tab-pane fade" id="menu-lunch">
+
+            <div class="tab-header text-center">
+              <h3>Tus tarjetas</h3>
+            </div>
+
+            
+            </div>
+          </div><!-- Tarjetas-->
+
+          <div class="tab-pane fade" id="menu-dinner">
+
+            <div class="tab-header text-center">
+              <h3>Pedidos</h3>
+            </div>
+
+            </div>
+          </div><!-- Pedidos -->
+
+        </div>
+
+      </div>
+    </section>
+  </main><!-- Fin main -->
+ <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel">Carrito</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body CartCarga">
+     <div class="canvas-body CartChar"></div>
+     <hr>
+     <div class="modal-footer">
+      <div class = "row">
+        <div class="col">
+          <button type="button" class="btn btn-danger" id="vaciar">
+              Vaciar carrito
+          </button>
+        </div>
+        <div class="col">
+          <button type="button" id="procesarCompra" class="btn btn-success ">
+              Finalizar compra
+          </button>
+        </div>
+        <div class="col">
+          <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="offcanvas" 
+              aria-label="Close">
+              Cerrar Carrito
+          </button>
+        </div>
+    </div>
+      <span>Precio total: </span>
+      <p class="text-center" id="precioTotal"></p>
+      </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+            <img src="assets/img/icono.ico" class="iconNewPassword"alt="">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <h5 class="modal-title" id="exampleModalLabel">&nbsp;&nbsp;Cambio de contraseña</h5>
+      <div class="modal-body reservation-form-bg">
+        <div class="col-lg-12">
+        <label for="InputOldPassword" class="form-label">Su contraseña anterior:</label>
+        <div class="form-floating needs-validation col-16 position-relative" novalidate>
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Su contrseña anterior" name="newPassword" required>
+          <label for="floatingPassword">Su contrseña anterior</label>
+        </div>
+        <label for="InputNewPassword" class="form-label">Su nueva contraseña:</label>
+        <div class="form-floating col-16 position-relative needs-validation" novalidate>
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Escriba su nueva contraseña"  name="newPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos un número y una letra mayúscula y minúscula, y al menos 8 o más caracteres." placeholder="Escriba su contraseña" required>
+          <label for="floatingPassword">Escriba su nueva contraseña</label>
+          <div id="message">
+            <h3>La contraseña debe contener lo siguiente:</h3>
+            <p id="letter" class="invalid">A <b>minusculas</b> carta</p>
+            <p id="capital" class="invalid">A <b>Mayusculas</b> carta</p>
+            <p id="number" class="invalid">A <b>numeros</b></p>
+            <p id="length" class="invalid">Minimos <b>8 caracteres</b></p>
+          </div>
+        </div>
+        <label for="InpudPassword" class="form-label">Vuelva a escribir su nueva contraseña:</label>
+        <div class="form-floating  needs-validation" novalidate>
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Vuelva a escribir su nueva contraseña"  name="repeatNewPassword"required>
+          <label for="floatingPassword">Vuelva a escribir su nueva contraseña</label>
+        </div>
+      </div>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" required>
+          <label class="form-check-label" for="flexSwitchCheckDefault">Cerrar sesión en  todas partes<br> Cambiar de contraseña implicara que se cierren todas las sesiones que tenga abierta.</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="col-12">
+          <button type="button" class="btn-cambio  bg-gradient" id="submitBtn">Guardar Cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- ======= Pie de pagina ======= -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div>
+            <h4>Ubicación</h4>
+            <p>
+              Pedo Juan Caballero<br>
+              Villa Elisa, VE NUM - PY<br>
+            </p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Contacto</h4>
+            <p>
+              <strong>Telefóno:</strong> +595 994 152020<br>
+              <strong>Email:</strong> motripy@gmial.com<br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Horario de atención</h4>
+            <p>
+              <strong>24Hrs.</strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Siguienos</h4>
+          <div class="social-links d-flex">
+            <a href="https://www.facebook.com/Motripy?mibextid=ZbWKwL" class="facebook"><i
+                class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com/motripy?igshid=MzRlODBiNWFlZA==" class="instagram"><i
+                class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>MOTRIPY</span></strong>. TODOS LOS DERECHOS RESERVADOS.
+      </div>
+      <div class="credits">
+        <a href="https://bootstrapmade.com/license/ ">Designed by GRUPO 4</a>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  <div class="icon-scroll d-flex align-items-center justify-content-center">
+    <a href="https://wa.me/994152020?text=Quiero%20realizar%20un%20pedido%20de%20juguetes%20" target="_blank"
+      class="scroll-wh d-flex align-items-center justify-content-center"><i class="bi bi-whatsapp"></i></a>
+  </div>
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+ 
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

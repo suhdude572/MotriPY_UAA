@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Iniciar Sesion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/estiloRegistro.css" rel="stylesheet" type="text/css"> 
+        <link rel="icon" href="logo.ico">
+    </head>
+    <body style="background-image: url(images/images/fondo/InicioSesion.png); background-size: cover" >
+         <section class = "container">
+                <div class="row my-5 needs-validation" novalidate>
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                    
+                    <form action="" method="POST" class="colorFormulario">
+                        <h3 class="display-5 text-primary text-center">Iniciar Sesión</h3>
+                    <div class = "col-16 position-relative">
+                        <label for="emailInput" class="form-label">Correo Electronico:</label>
+                        <input type = "email" class = "form-control" id = "emailInput" placeholder="Escribe tu correo" requerid>
+                        <img class="input-icon" src="images/images/correo-electronico.png" alt="">
+                        <div class ="valid-tooltip">
+                            Correcto
+                        </div>
+                         <div class ="invalid-tooltip">
+                            Es necesario poner el correo
+                        </div>
+                    </div>
+                    
+                    <div class = "col-16 position-relative">
+                        <label for="inputPass" class="form-label">Contraseña:</label>
+                        <input type="password" class="form-control" id="inputPass" placeholder="Escriba su contraseña" requerid>
+                        <img class="input-icon" src="images/images/mostrar-contrasena.png" alt="">
+                        <div class ="valid-tooltip">
+                            Correcto
+                        </div>
+                         <div class ="invalid-tooltip">
+                            Es necesario poner la contraseña
+                        </div>
+                    </div>
+                    <div class = "col-12">
+                        <div class = form-check>
+                            <a class="nav-link" href="recoverPassword.html"> ¿Has olvidado tu contraseña?</a>
+                        </div>
+                    </div>
+                        <a href="index.html" class="btn">Ingresar</a>
+                    <a href="index.html" class="btn">Registrate</a>
+                    </div>
+                   
+                </div>
+                </section>
+            </form>
+        <footer>
+        <div class="redes-div">        
+            <ul class="icon-redes">
+                <li><a href="definicion.html" class="redes"><span class="facebook"><i class="fab fa-facebook"></i></span></a></li>
+                <li><a href="https://www.instagram.com/acosta_julian01/?hl=es"class="redes"><span class="instagram"><i class="fab fa-instagram"></i></span></a></li>
+                <li><a href="juegos.html" class="redes"><span class="twitter"><i class="fab fa-twitter"></i></span></a></li>
+            </ul>
+            <img class="Logo" src="logo.png" alt="">
+          </div>
+        <h2 class="titulo-final">&copy;INTEGRANTESC. </h2>
+    </footer>
+   <script src="js/jquery3.7.0.min.js"></script>
+                        <script>
+                    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+                </script>
+        <script src="js/bootstrap.min.js"></script>
+                        <script  src= "https://kit.fontawesome.com/41bcea2ae3.js" crossorigin= "anonymous"> </script>
+    </body>
+</html>
